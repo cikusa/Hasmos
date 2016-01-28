@@ -1,0 +1,33 @@
+name:                hasmos
+version:             0.1.0.0
+synopsis:            A game inspired by Befunge.
+description:         Please see README.md
+homepage:            http://github.com/cikusa/hasmos#readme
+license:             MIT
+license-file:        LICENSE
+author:              Tyler Ling
+maintainer:          tylerblugandersen@icloud.com
+copyright:           2015 Tyler Ling
+category:            Game
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable hasmos
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >=4.8 && <4.9
+                     , freer
+                     , reactive-banana
+                     , gloss
+                     , gloss-game
+                     , data-accessor
+                     , data-accessor-template
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  default-extensions:  RecordWildCards
+
+source-repository head
+  type:       git
+  location:   https://github.com/cikusa/hasmos
